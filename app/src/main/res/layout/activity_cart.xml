@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.viba.olokartusers.BagAvtivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cocococ"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="5dp"
+        android:layout_alignParentBottom="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loc_relate">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/locati_image"
+                android:src="@drawable/deliverylocation"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deliver To"
+                android:textStyle="bold"
+                android:textColor="#42a626"
+                android:id="@+id/texts"
+                android:textSize="20sp"
+               android:fontFamily="@font/roboto"
+                android:layout_toEndOf="@+id/locati_image"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressui"
+                android:text="address"
+                android:textSize="18dp"
+                android:textColor="#42a626"
+                android:layout_toStartOf="@+id/loc_change"
+                android:layout_toEndOf="@+id/locati_image"
+                android:layout_below="@+id/locati_image"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp"
+                android:id="@+id/loc_change"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:text="Location"
+                android:layout_marginEnd="2dp"
+                android:drawableRight="@drawable/ic_baseline_edit_24"
+                android:drawablePadding="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Checkrelate"
+            android:layout_below="@id/loc_relate">
+
+            <TextView
+                android:id="@+id/Bag_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="BagPrice"
+                android:layout_margin="10dp"
+                android:textSize="22sp" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:background="@drawable/buttonstyleindeliverystat"
+            android:layout_alignParentEnd="true"
+           android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="2dp"
+            android:id="@+id/check_out"/>
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cocococ">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/your_Bagrelative">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/storedetails"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/vendorstore_image"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Name"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:id="@+id/sleer_name"
+                android:fontFamily="@font/montserrat_bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:id="@+id/sleer_city"
+                    android:layout_marginTop="5dp"
+
+                    android:textSize="20sp"
+                    android:layout_marginStart="10sp"
+                    android:fontFamily="@font/roboto"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bagrecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/storedetails"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Storerequest"
+            android:layout_below="@+id/bagrecycler"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/editdesign"
+            android:paddingStart="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:hint="Any Store Request?"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Storerequest"
+            android:layout_margin="4dp"
+            android:id="@+id/Delivery_btns">
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Home Delivery"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:background="#42a626"
+                android:id="@+id/home_delivery"/>
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Pick Up"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:id="@+id/pick_up_from"
+                android:background="#42a626"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Delivery_btns"
+            android:id="@+id/Bill_details"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill Details"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="#42a626"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_bold"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item Total"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/roboto"/>
+
+
+                <TextView
+                    android:id="@+id/totalpri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                   android:layout_margin="5dp"
+                    android:text="Total"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="20sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/TotalBill"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Bill_details">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Charges"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/roboto"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
+                    android:text="0 ₹"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Pay"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/toopri"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

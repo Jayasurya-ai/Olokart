@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.viba.olokartusers.ProfileActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userha">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName"
+            android:text="Your Name"
+            android:textColor="#42a626"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="mobile Number"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/user_mobile"
+            android:layout_below="@+id/userName"
+            android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/editProfile"
+                android:src="@drawable/pencil"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:id="@+id/cardAbout"
+                android:drawableStart="@drawable/about"
+                android:drawablePadding="15dp"
+                android:textColor="#42a626"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat"
+                android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:paddingEnd="15dp"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Condition"
+                    android:id="@+id/cardTerms"
+                    android:textColor="#42a626"
+                    android:textSize="20sp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:drawableStart="@drawable/terms_and_conditiona"
+
+                    android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feed Back"
+                    android:id="@+id/cardFeedback"
+                    android:drawableStart="@drawable/feedback"
+                    android:drawablePadding="15dp"
+                    android:textColor="#42a626"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat"
+                    android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share app"
+                    android:id="@+id/cardShare"
+                    android:drawableStart="@drawable/ic_baseline_share_24"
+                    android:drawablePadding="15dp"
+                    android:textColor="#42a626"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat"
+                    android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Desclaimer"
+                    android:id="@+id/cardDesclaimer"
+                    android:drawableStart="@drawable/desclaimer"
+                    android:drawablePadding="15dp"
+                    android:textColor="#42a626"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat"
+                    android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Help &amp; Support"
+                    android:id="@+id/cardHelp"
+                    android:drawableStart="@drawable/help_and_support"
+                    android:drawablePadding="15dp"
+                    android:textColor="#42a626"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat"
+                    android:drawableEnd="@drawable/ic_baseline_play_arrow_24"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:paddingEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:layout_centerVertical="true"
+       android:layout_below="@+id/userha"
+       android:layout_margin="2dp">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Logout"
+           android:id="@+id/cardLogout"
+           android:textColor="#42a626"
+           android:textSize="20sp"
+           android:fontFamily="@font/montserrat_bold"
+           android:layout_centerVertical="true"
+           android:drawablePadding="15dp"
+           android:drawableStart="@drawable/ic_baseline_power_settings_new_24"
+           android:layout_gravity="center"
+           android:layout_marginStart="10dp"
+           android:textAllCaps="true"
+           android:textStyle="bold"/>
+   </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/navigation_profile"
+        android:padding="1dp"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/downback"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#42a626"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomeActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_shome">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/text"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            android:background="@drawable/navigate">
+
+
+        </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:src="@drawable/olologo"
+            android:layout_centerHorizontal="true"/>
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/location_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:onClick="nearbySellers"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/editlocation"
+            />
+    </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/delievrtxt"
+            android:fontFamily="@font/montserrat"
+            android:textSize="12dp"
+            android:textColor="@android:color/black"
+            android:drawablePadding="5dp"
+            android:paddingStart="5dp"
+            android:drawableStart="@drawable/ic_baseline_notifications_none_24"
+            android:text=" Products will be delivery within 12 hours \n Products delivery is available from 6pm to 9pm"/>
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/homeViewpager"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/delievrtxt"
+            android:layout_marginTop="2dp"
+            android:layout_height="180dp">
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/homeLin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeViewpager"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vendors Near By You"
+            android:textSize="20sp"
+            android:id="@+id/vedortext"
+            android:layout_margin="10dp"
+            android:textColor="#42a626"
+            android:layout_below="@+id/homeLin"
+            android:textStyle="bold"
+           android:fontFamily="@font/montserrat_bold"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressHome"
+            android:layout_below="@id/vedortext"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No sellers in your location!"
+            android:textSize="17sp"
+            android:id="@+id/noSellersNearbytxt"
+            android:textColor="#47a626"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            android:layout_below="@id/vedortext"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/vedortext" />
+
+
+    </RelativeLayout>
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bagFloat"
+            android:layout_above="@+id/navigation_home"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/bag"
+            />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/navigation_home"
+        android:padding="1dp"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/downback"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"/>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

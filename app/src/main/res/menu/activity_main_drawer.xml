@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/updatepro"
+            android:title="Update Store Profile"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/aboutus"
+            android:title="About Us"
+            android:icon="@drawable/ic_launcher_background"/>
+
+        <item
+            android:id="@+id/tearmsandconditions"
+            android:title="Terms &amp; Conditions"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/feedback"
+            android:title="FeedBack"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/shareapp"
+            android:title="Share app"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/desclaimer"
+            android:title="Desclaimer"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/helpandsupport"
+            android:title="Help &amp; Support"
+            android:icon="@drawable/ic_launcher_background"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_launcher_background"/>
+    </group>
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardBackgroundColor="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/edithouse"
+        android:layout_below="@+id/usaddress"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edithousenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:drawablePadding="10dp"
+           android:fontFamily="@font/montserrat"
+            android:hint="House/Flat/Street"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/editlan"
+        android:layout_below="@+id/edithouse"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editlandnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+           android:fontFamily="@font/montserrat"
+            android:hint="LandMark"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="18sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pay Online"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttonstyleindeliverystat"
+                android:fontFamily="@font/montserrat_bold"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:id="@+id/payon"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash On Delivery"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/buttonstyleindeliverystat"
+            android:textColor="@android:color/white"
+            android:id="@+id/cashon"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

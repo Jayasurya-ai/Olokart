@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+       app:cardElevation="5dp"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorry!"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="21dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#47a626"/>
+            <View
+                android:layout_width="70dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="#47a626"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="75dp"
+                android:src="@drawable/no_gps"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#47a626"
+                android:textSize="21sp"
+                android:layout_margin="20dp"
+                android:text="Error! Location!"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/buttonloc"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Reset Location"
+                android:fontFamily="@font/montserrat"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittextbackground"
+                android:textColor="@color/colorText" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        app:cardElevation="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/order_date"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textColor="#42a626"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BagValue"
+                android:textColor="#42a626"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/bag_value"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/newHomeorderid"
+                android:text="Order id"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="20sp"
+                android:layout_below="@id/bag_value"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Products"
+                android:id="@+id/order_seeall"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginTop="12dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/buttonstyleindeliverystat"
+                android:layout_below="@+id/newHomeorderid"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deliveryStatus"
+                android:text="Delivery Status"
+                android:fontFamily="@font/montserrat"
+                android:layout_below="@id/newHomeorderid"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstyleindeliverystat"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

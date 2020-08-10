@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Status"
+        android:id="@+id/delStatustxt"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:background="#42a626"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_below="@id/delStatustxt"
+        android:id="@+id/view1"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/box"
+        android:layout_marginTop="5dp"
+        android:id="@+id/imagebox"
+        android:layout_below="@+id/view1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderPlacedtxt"
+        android:text="Order Placed"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/view1"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/imagebox" />
+    <View
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:background="#42a626"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/view2"
+        android:layout_below="@+id/imagebox"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bikeicon"
+        android:id="@+id/bikeicon"
+        android:visibility="gone"
+        android:layout_below="@+id/view2"
+        android:layout_centerHorizontal="true"/>
+    <View
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:background="#4d4d4d"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewgray2"
+        android:layout_below="@+id/imagebox"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/delivery_boy"
+        android:id="@+id/bikeicongray"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:layout_below="@+id/viewgray2"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startedDeltxt"
+        android:text="Accepted /\nDelivery Started"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/viewgray2"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="center"
+        android:textColor="#4d4d4d"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/bikeicongray" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:background="#42a626"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/view3"
+        android:layout_below="@+id/bikeicongray"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/manicon"
+        android:id="@+id/manicon"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/viewgray3"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:background="#4d4d4d"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewgray3"
+        android:layout_below="@+id/bikeicongray"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/delivery_box"
+        android:id="@+id/manicongray"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/viewgray3"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deliveredtxt"
+        android:text="Delivered"
+        android:layout_below="@id/viewgray3"
+        android:fontFamily="@font/roboto"
+        android:textColor="#4d4d4d"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/manicongray" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/okStatusdel"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/deliveredtxt"
+        android:background="@drawable/buttonstyleindeliverystat"
+        android:fontFamily="@font/montserrat_bold"/>
+</LinearLayout>

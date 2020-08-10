@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="itemname"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="5dp"
+        android:id="@+id/i_name"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:textColor="#4d4d4d"
+        android:id="@+id/pro_qua"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:layout_toEndOf="@+id/i_name"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4d4d4d"
+        android:text="2"
+        android:fontFamily="@font/montserrat"
+        android:layout_toEndOf="@+id/pro_qua"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:id="@+id/no_items"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:id="@+id/prprice"
+        android:layout_alignParentEnd="true"
+        android:textColor="#4d4d4d"
+        android:layout_marginEnd="10dp"/>
+
+
+</RelativeLayout>

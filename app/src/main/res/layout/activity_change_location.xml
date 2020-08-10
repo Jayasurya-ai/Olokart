@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeLocationActivity">
+    <EditText
+        android:id="@+id/place_change"
+        android:hint="Search"
+        android:background="@drawable/editdesign"
+        android:inputType="textPostalAddress"
+        android:padding="15dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@drawable/places_ic_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/places_change_recycler_view"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/headbagtxt"
+        android:text="Replace Bag"
+
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/playfair_display"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtbagalert"
+        android:layout_below="@id/headbagtxt"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:text="You are adding another seller products, the past added items will be deleted?"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yesBagalert"
+        android:text="Yes"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/txtbagalert"
+        android:textSize="20sp"
+        android:textColor="#42a626"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noBagalert"
+        android:text="No"
+        android:layout_toStartOf="@+id/yesBagalert"
+        android:layout_below="@id/txtbagalert"
+        android:textSize="20sp"
+        android:textColor="#42a626"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"/>
+</RelativeLayout>
