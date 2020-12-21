@@ -51,7 +51,7 @@ public class SellerProducts extends AppCompatActivity {
     Button category, subcatbtn;
     ProgressBar progressBar;
 
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
