@@ -1,74 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="5dp"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_margin="10dp">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp"
         app:cardElevation="10dp"
-        android:padding="10dp">
+        app:cardBackgroundColor="@android:color/black"
+        app:cardCornerRadius="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Categories"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_margin="10dp"
+                android:textSize="20dp"/>
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_baseline_close_24"
+                   android:layout_alignParentEnd="true"
+                   android:id="@+id/crossdailog"
+                   android:layout_margin="10dp"/>
+           </RelativeLayout>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:background="@color/quantum_grey"
+                android:layout_marginStart="10dp"/>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
-
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+<!--                <ImageView-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:id="@+id/allcatimage"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:src="@drawable/allcategoryimage"/>-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/allcat"
             android:text="All"
-            android:drawableStart="@drawable/ic_all"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="20dp"
             android:drawablePadding="10dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textAllCaps="true"
-            android:textColor="#42a626"
+            android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_bold"/>
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/riceimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/catrice"/>-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ricecat"
             android:text="Rice ,Grains &amp; Flours"
-            android:textSize="20sp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
             android:drawablePadding="10dp"
+
             android:textAllCaps="false"
-            android:drawableStart="@drawable/catrice"
-            android:textColor="#42a626"
+            android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_bold"/>
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/dalimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/dals"/>-->
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/dalscat"
             android:text="Dals and Pulses"
-            android:drawableStart="@drawable/dals"
             android:drawablePadding="10dp"
-            android:textSize="20sp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="20sp"
+            android:textSize="15sp"
             android:textAllCaps="false"
-            android:textColor="#42a626"
+            android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_bold"/>
 
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -76,20 +150,123 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dairycat"
+                        android:text="Dairy Products"
+                        android:drawablePadding="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20sp"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/brandcat"
+                        android:text="Branded Products"
+                        android:drawablePadding="10dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginStart="20sp"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/beveragecat"
+                        android:text="Beverages"
+                        android:drawablePadding="10dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginStart="20sp"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/oilimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/oil"/>-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edibleoilcat"
+
+                    android:layout_marginStart="20dp"
                     android:text="Edible Oils "
-                    android:drawableStart="@drawable/bottle"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
                     android:drawablePadding="10dp"
                     android:textAllCaps="false"
-                    android:textColor="#42a626"
+                    android:textColor="@android:color/white"
                     android:fontFamily="@font/montserrat_bold"/>
 
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -97,19 +274,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/householdimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/household"/>-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/householdcat"
                     android:text="House Hold Items "
-                    android:textSize="20sp"
-                    android:drawableStart="@drawable/household"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
                     android:textAllCaps="false"
                     android:drawablePadding="10dp"
-                    android:textColor="#42a626"
+                    android:textColor="@android:color/white"
                     android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
 
 
             </androidx.cardview.widget.CardView>
@@ -117,20 +310,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/masalaimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/masalas"/>-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/masalalcat"
+
+                    android:layout_marginStart="20dp"
                     android:text="Masalas &amp; Spices"
-                    android:drawableStart="@drawable/spices"
                     android:drawablePadding="10dp"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+
                     android:textAllCaps="false"
-                    android:textColor="#42a626"
                     android:fontFamily="@font/montserrat_bold" />
 
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -138,41 +350,123 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
 
-                <TextView
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:id="@+id/perscareimage"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/perscare"/>-->
+
+
+                    <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perscarecat"
                     android:text="Personal Care"
+                        android:layout_marginStart="20dp"
                     android:drawablePadding="10dp"
-                    android:drawableStart="@drawable/perfume"
-                    android:textSize="20sp"
+                        android:layout_centerVertical="true"
+                    android:textSize="15sp"
                     android:textAllCaps="false"
-                    android:textColor="#42a626"
+                        android:textColor="@android:color/white"
                     android:fontFamily="@font/montserrat_bold" />
 
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="2dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@android:color/black"
                 android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/sugarsaltcat"
+                    android:layout_marginStart="20dp"
                     android:text="Sugars &amp; Salts"
-                    android:drawableStart="@drawable/sugar"
                     android:drawablePadding="10dp"
-                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
                     android:textAllCaps="false"
-                    android:textColor="#42a626"
+                    android:textColor="@android:color/white"
                     android:fontFamily="@font/montserrat_bold" />
 
+                </RelativeLayout>
+
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vegecat"
+                        android:text="Vegetable &amp; Fruits"
+                        android:drawablePadding="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20sp"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:elevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/othercat"
+                        android:text="Others"
+                        android:drawablePadding="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20sp"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/montserrat_bold"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

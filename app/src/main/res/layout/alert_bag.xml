@@ -1,38 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/headbagtxt"
-        android:text="Replace Bag"
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/headbagtxt"-->
+<!--        android:text="Cancel Order Con"-->
+<!--        android:textSize="25dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:fontFamily="@font/playfair_display"/>-->
 
-        android:textSize="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/playfair_display"/>
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtbagalert"
-        android:layout_below="@id/headbagtxt"
-        android:textSize="20sp"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/canceltxt"
+        android:textSize="12sp"
         android:layout_margin="5dp"
-        android:text="You are adding another seller products, the past added items will be deleted?"/>
+        android:textColor="@color/quantum_grey"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="10dp"
+        android:hint="Please enter the reason for cancellation?"
+        android:fontFamily="@font/montserrat"
+        android:background="@drawable/editdesign"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/yesBagalert"
-        android:text="Yes"
+        android:id="@+id/cancelConfirm"
+        android:text="Confirm cancellation"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/txtbagalert"
-        android:textSize="20sp"
+        android:layout_below="@id/canceltxt"
+        android:textSize="15sp"
         android:textColor="#42a626"
         android:textStyle="bold"
-        android:textAllCaps="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
         android:padding="5dp"
@@ -40,15 +63,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/noBagalert"
-        android:text="No"
-        android:layout_toStartOf="@+id/yesBagalert"
-        android:layout_below="@id/txtbagalert"
-        android:textSize="20sp"
-        android:textColor="#42a626"
+        android:id="@+id/dismissOrder"
+        android:text="Dismiss"
+        android:layout_toStartOf="@+id/cancelConfirm"
+        android:layout_below="@id/canceltxt"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
-        android:textAllCaps="true"
-        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:padding="5dp"/>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

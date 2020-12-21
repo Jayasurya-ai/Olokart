@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:elevation="5dp"
+        app:cardElevation="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Delivery Address"
+                android:id="@+id/deliveryadd"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#47a626"
+                android:layout_margin="15dp"
+                android:textSize="18dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliveryadd"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:background="@drawable/editdesign"
+                android:id="@+id/deliveryaddd">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:id="@+id/homeLocation"
+                android:textAllCaps="true"
+                android:drawableStart="@drawable/ic_baseline_home_24"
+                android:paddingStart="2dp"
+                android:drawablePadding="10dp"
+                android:paddingEnd="10dp"
+                android:padding="5dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/address1"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/homeLocation"
+            android:visibility="visible"
+            android:textSize="12dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/quantum_grey"
+                android:layout_below="@+id/deliveryaddd"
+                android:id="@+id/viewdeliry"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deliveryaddd"
+                android:id="@+id/defjdfj"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/editdesign"
+                android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OTHER"
+                android:id="@+id/otherLoc"
+                android:paddingStart="2dp"
+                android:drawablePadding="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@android:color/black"
+                android:drawableStart="@drawable/ic_baseline_location_black"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="5dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/address2"
+                android:layout_below="@id/otherLoc"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:textSize="12dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/quantum_grey"
+                android:layout_below="@+id/defjdfj"
+                android:id="@+id/hddhdh"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loaction_set"
+                android:layout_below="@id/hddhdh"
+                android:text="Add address"
+                android:textAllCaps="false"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/btnstl"
+                android:textColor="@android:color/white"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

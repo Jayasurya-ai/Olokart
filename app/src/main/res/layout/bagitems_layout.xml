@@ -3,100 +3,139 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/bagframelayout"
-    android:layout_margin="2dp"
+    android:layout_margin="1dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="2dp"
-        android:elevation="10dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@android:color/darker_gray"
-        app:cardCornerRadius="10dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="6dp"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/bagproname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Product Name"
+        />
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp"
-            android:layout_gravity="center">
-            <TextView
-                android:id="@+id/bagproname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:padding="3dp"
-                android:layout_margin="4dp"
-                android:layout_marginTop="5dp"
-               android:fontFamily="@font/montserrat_bold"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textColor="@android:color/black"
-                android:layout_centerHorizontal="true"
-                android:text="Product Name"
-                />
+            android:text="Weight :"
+            android:textColor="#4d4d4d"
+            android:id="@+id/weight"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/bagproname" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@+id/weight"
+            android:layout_below="@id/bagproname"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:textColor="#4d4d4d"
+            android:id="@+id/bagQuantity_text"
+            android:textSize="13sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price :"
+            android:textColor="#47a626"
+            android:id="@+id/Pricebag"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/weight" />
+        <TextView
+            android:id="@+id/bagproprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight"
+            android:layout_toEndOf="@+id/Pricebag"
+            android:text="Rs"
+            android:fontFamily="@font/montserrat"
+            android:layout_centerVertical="true"
+            android:textColor="#42a626"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp" />
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/bagnumber_Buttonqty"
+            app:textColor="@android:color/white"
+            app:backGroundColor="#42a626"
+            android:layout_width="80dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"
+            android:splitMotionEvents="true"
+            android:layout_marginEnd="10dp"
+            android:layout_height="35dp"
+            android:elevation="6dp"
+            android:layout_below="@+id/bagproname">
+
+        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/quantum_grey"
+            android:layout_below="@id/bagproprice"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="2dp"-->
+<!--        android:background="@android:color/darker_gray"-->
+<!--        app:cardCornerRadius="10dp">-->
 
 
-            <TextView
-                android:id="@+id/bagproprice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/roboto"
-                android:text="Rs"
-                android:textSize="20sp" />
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bagproprice"
-                android:padding="2dp">
+
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/bagproprice"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:padding="2dp">-->
 
 
 
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bagqtyrelative"
-                    android:layout_margin="10dp"
-                   >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Qty"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center"
-                        android:background="@drawable/qtydesign"
-                        android:id="@+id/bagQuantity_text"
-                        android:textSize="20sp"/>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/bagqtyrelative"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                   >-->
 
 
-                </RelativeLayout>
+
+<!--                </RelativeLayout>-->
 
 
-                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-                    android:id="@+id/bagnumber_Buttonqty"
-                    app:textSize="15sp"
-                    app:textColor="@android:color/white"
-                    app:backGroundColor="#42a626"
-                    android:layout_width="80dp"
-                    android:layout_alignParentEnd="true"
-                    android:visibility="visible"
-                    android:splitMotionEvents="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_height="35dp"
-                    android:elevation="6dp"
-                    android:gravity="center">
-
-                </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-
-            </RelativeLayout>
 
 
-        </RelativeLayout>
+<!--            </RelativeLayout>-->
 
-    </androidx.cardview.widget.CardView>
+
+<!--        </RelativeLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
 
 
 </FrameLayout>

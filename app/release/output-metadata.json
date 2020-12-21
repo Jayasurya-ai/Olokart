@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.viba.olokart",
+  "applicationId": "com.olokart.users",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "properties": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 8,
+      "versionName": "1.0.7",
       "enabled": true,
       "outputFile": "app-release.apk"
     }

@@ -4,42 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.viba.olokartusers.OrdersAvtivity">
-
-
-
+    android:background="@android:color/black"
+    tools:context="com.olokart.users.OrdersAvtivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER HISTORY"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center_horizontal"
+        android:textSize="13dp"
+        android:layout_marginTop="15dp"/>
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="30dp"
+        android:src="@drawable/leftarrow"
+        android:id="@+id/backImage"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"/>
+        
+        
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ProgressBar
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/progressOrders"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No orders yet!"
-            android:textSize="17sp"
-            android:id="@+id/noOrderstxt"
-            android:textColor="#47a626"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginTop="50dp"
-            android:visibility="gone" />
-
-    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/newOrderRecycler"
-        android:layout_margin="3dp"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="-100dp"
+        app:cardCornerRadius="30dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No orders yet!"
+                android:textSize="20sp"
+                android:id="@+id/noOrderstxt"
+                android:textColor="#47a626"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginTop="200dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newOrderRecycler"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="40dp"/>
+
+    </androidx.cardview.widget.CardView>
+
 
     </RelativeLayout>
+
+
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kitOrders"
+            style="@style/SpinKitView.DoubleBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:SpinKit_Color="#47a626" />
+
 
 
 

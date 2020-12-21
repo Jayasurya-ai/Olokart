@@ -52,11 +52,11 @@ OLOKART BUSINESS\n
 We are empowering our Partnered Kiranas with the Digital India and with the power of technology we are connecting Farmers with these outlets in order to benefit the farmers pricing issues in our country.\n 
 
 The Mission of the OLOKART is to empower the backbone of India i.e. farmers with power of technology  to connect them with direct consumers through small businesses.</string>
-    <string name="google_maps_key">AIzaSyBXrz8dM508HUq2Szka81fF4bDws_WmcMI</string>
+    <string name="google_maps_key">AIzaSyD5qHZ4_vugCBRgSmXK-hzdbaTl-xNXyA4</string>
     <string-array name="spin_km">
-        <item> (0 - 6)Km </item>
-        <item> (0 - 4)Km</item>
-        <item> (0 - 2)Km </item>
+        <item> (0 - 20)Km </item>
+        <item> (0 - 10)Km</item>
+        <item> (0 - 5)Km </item>
         <item> Change your location </item>
     </string-array>
     <string-array name="spin_subcat">

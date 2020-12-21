@@ -3,154 +3,219 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
+    android:background="@android:color/white"
+    tools:context=".VerifyPhoneActivity"
     android:orientation="vertical">
-    <androidx.cardview.widget.CardView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        app:cardElevation="10dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="60dp">
+        android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Otp Verification"
-        android:textColor="@android:color/black"
-        android:fontFamily="@font/montserrat_bold"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:id="@+id/verifyotp"
-        android:textAlignment="center"
-     android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please while we are Loading One Time Password(Otp)/Enter Otp"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="20dp"
-            android:id="@+id/textf"
-            android:layout_below="@+id/verifyotp"/>
 
-            <EditText
-                android:id="@+id/editTextCode"
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/registerback" />
+
+            <ImageView
+                android:id="@+id/olologo"
+                android:layout_width="103dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/olokartlogoblack" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/olologo"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="OTP Verification"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardVerify"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="Code"
-                android:fontFamily="@font/montserrat"
-                android:layout_below="@+id/textf"
-                android:background="@drawable/editdesign"
-                android:layout_margin="30dp"
-                android:inputType="phone"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                android:textColor="@android:color/black">
-                <requestFocus />
-            </EditText>
-            <Button
-                android:id="@+id/buttonSignIn"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@+id/editTextCode"
-                android:text="Verify"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                android:fontFamily="@font/montserrat_bold"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/buttonstyleindeliverystat"
-                android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white" />
-            <ProgressBar
-                android:id="@+id/progressbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonSignIn"
+                android:layout_below="@+id/textView3"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginTop="95dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="45sp"
+                app:cardElevation="20sp">
 
-                android:layout_centerHorizontal="true"
-                android:visibility="gone" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/spin_kitVerify"
+                        style="@style/SpinKitView.DoubleBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:SpinKit_Color="#47a626" />
+
+                    <TextView
+                        android:id="@+id/verifyotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Verify your Number"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textf"
+                        android:layout_width="209dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verifyotp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textMultiLine"
+                        android:text="OTP has been sent to your Mobile number, Please Verify"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textf"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/editdesign"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:hint="Code"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/buttonSignIn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextCode"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginEnd="25sp"
+                        android:layout_marginBottom="30sp"
+                        android:background="@drawable/otpbtnsyle"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Verify"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/cardVerify"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/motocycle"
+                    android:layout_width="298dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/otpscreen" />
+
+                <RelativeLayout
+                    android:id="@+id/relLogTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/motocycle"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/alreadyhaveanacnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:fontFamily="@font/montserrat"
+                        android:text="Didn't receive the code?"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/alreadyhaveanacnt"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:onClick="resendotp"
+                        android:text="Go Back"
+                        android:textColor="#42a626"
+                        android:textSize="13sp" />
+
+
+
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
 
         </RelativeLayout>
+    </ScrollView>
 
-
-    </androidx.cardview.widget.CardView>
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        app:contentInsetStartWithNavigation="0dp"-->
-<!--        app:layout_collapseMode="pin"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
-
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:paddingEnd="?attr/actionBarSize"-->
-<!--                android:paddingRight="?attr/actionBarSize"-->
-<!--                android:text="VERIFICATION"-->
-<!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
-<!--                android:textColor="@android:color/black" />-->
-
-<!--        </RelativeLayout>-->
-
-<!--    </androidx.appcompat.widget.Toolbar>-->
-
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerInParent="true"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="vertical">-->
-
-
-
-<!--            <TextView-->
-<!--                android:layout_width="280dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="OTP has been sent to you on your mobile phone. Please enter it below"-->
-<!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
-<!--                android:textColor="@android:color/black" />-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="35dp"-->
-<!--                android:layout_marginBottom="15dp"-->
-<!--                android:orientation="horizontal">-->
-
-
-
-<!--            </LinearLayout>-->
-
-
-
-
-
-<!--        </LinearLayout>-->
-<!--    </RelativeLayout>-->
-<!--</LinearLayout>-->
 </RelativeLayout>

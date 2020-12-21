@@ -1,166 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@android:color/black"
     tools:context=".HomeActivity">
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/relative_shome">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolHome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/text"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:background="@drawable/navigate">
-
-
-        </androidx.appcompat.widget.Toolbar>
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:src="@drawable/olologo"
-            android:layout_centerHorizontal="true"/>
-
-
-
-
-
+        android:text="HOME"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="13dp"
+        android:id="@+id/homename"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"/>
+<!--    <ImageView-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:src="@drawable/homeloc"-->
+<!--        android:id="@+id/backabout"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="12dp"/>-->
 
         <ImageView
             android:id="@+id/location_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:onClick="nearbySellers"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/editlocation"
-            />
-    </RelativeLayout>
-
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/delievrtxt"
-            android:fontFamily="@font/montserrat"
-            android:textSize="12dp"
-            android:textColor="@android:color/black"
-            android:drawablePadding="5dp"
-            android:paddingStart="5dp"
-            android:drawableStart="@drawable/ic_baseline_notifications_none_24"
-            android:text=" Products will be delivery within 12 hours \n Products delivery is available from 6pm to 9pm"/>
-
-
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/homeViewpager"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/delievrtxt"
-            android:layout_marginTop="2dp"
-            android:layout_height="180dp">
-
-
-        </androidx.viewpager.widget.ViewPager>
-
-        <LinearLayout
-            android:id="@+id/homeLin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/homeViewpager"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vendors Near By You"
-            android:textSize="20sp"
-            android:id="@+id/vedortext"
             android:layout_margin="10dp"
-            android:textColor="#42a626"
-            android:layout_below="@+id/homeLin"
-            android:textStyle="bold"
-           android:fontFamily="@font/montserrat_bold"/>
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressHome"
-            android:layout_below="@id/vedortext"
-            android:layout_marginTop="50dp"
-            android:visibility="gone"
-            android:layout_centerHorizontal="true"/>
-
+            android:src="@drawable/editloc"
+            />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No sellers in your location!"
-            android:textSize="17sp"
-            android:id="@+id/noSellersNearbytxt"
-            android:textColor="#47a626"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginTop="50dp"
-            android:visibility="gone"
-            android:layout_below="@id/vedortext"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/homeRecycler"
+            android:id="@+id/userloc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@+id/vedortext" />
-
-
+            android:layout_below="@+id/homename"
+            android:layout_marginStart="23dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:maxLines="2"
+            android:layout_toStartOf="@+id/location_image"
+            android:textColor="@color/quantum_grey"
+            android:textSize="11sp"
+            android:textStyle="bold" />
     </RelativeLayout>
-        </ScrollView>
-
-
-
-
-    </LinearLayout>
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/userha"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-100dp"
+        android:layout_marginTop="70dp">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="150dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/shout"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/shoutimage"/>
+
+        <TextView
+            android:id="@+id/delievrtxt"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bagFloat"
-            android:layout_above="@+id/navigation_home"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="20dp"
-            android:src="@drawable/bag"
-            />
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/shoutimage"
+            android:layout_marginStart="10dp"
+            android:text=" Products will be delivered within 12 hours \n Products delivery is available from 6pm to 9pm"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11dp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/homeViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/delievrtxt">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/homeLin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeViewpager"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/vedortext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homeLin"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Vendors Near By You"
+                android:textColor="#4d4d4d"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kitOrderedHome"
+                style="@style/SpinKitView.DoubleBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vedortext"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:SpinKit_Color="#47a626" />
+
+            <TextView
+                android:id="@+id/noSellersNearbytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vedortext"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/montserrat"
+                android:text="No sellers in your location!"
+                android:textColor="#47a626"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vedortext"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -171,7 +177,36 @@
         android:background="@drawable/downback"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         android:layout_alignParentBottom="true"
+
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu"/>
-    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation_home"
+        android:layout_alignParentEnd="true"
+        android:text="0"
+        android:textSize="10sp"
+        android:id="@+id/noofcartitems"
+        android:layout_marginBottom="115dp"
+        android:background="@drawable/cartnumber"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:elevation="7dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bagFloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation_home"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="25dp"
+        app:fabSize="normal"
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/bag" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

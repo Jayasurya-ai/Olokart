@@ -1,40 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.viba.olokartusers.AboutActivity">
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    tools:context="com.olokart.users.AboutActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABOUT US"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center_horizontal"
+        android:textSize="13dp"
+        android:layout_marginTop="15dp"/>
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="30dp"
+        android:src="@drawable/leftarrow"
+        android:id="@+id/backabout"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/userha"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="-100dp"
+        app:cardCornerRadius="30dp">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About Olokart"
-                android:layout_gravity="center"
-                android:textAllCaps="true"
-                android:textSize="15sp"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="#42a626"
-                android:layout_marginTop="10dp"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aboutus"
-                android:textSize="16sp"
-                android:layout_margin="5dp"
+                android:textSize="15sp"
+                android:layout_margin="10sp"
                 android:fontFamily="@font/montserrat"
                 android:textColor="@android:color/black"
                 android:layout_marginTop="2dp"/>
         </LinearLayout>
     </ScrollView>
-</FrameLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

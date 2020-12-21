@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.viba.olokartusers.SwipeUp">
-    <com.viba.olokartusers.VerticalViewPager
+    android:background="@android:color/white"
+    tools:context="com.olokart.users.SwipeUp">
+    <com.olokart.users.VerticalViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/vPager">
-    </com.viba.olokartusers.VerticalViewPager>
+    </com.olokart.users.VerticalViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

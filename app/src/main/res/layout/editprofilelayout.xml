@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         app:cardElevation="5dp"
         android:elevation="10dp"
-        app:cardCornerRadius="2dp"
+        app:cardCornerRadius="15dp"
         app:cardBackgroundColor="@android:color/white">
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,6 +25,7 @@
 
                 >
 
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editname"
                     android:layout_width="match_parent"
@@ -35,10 +36,10 @@
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/montserrat"
                     android:hint=" UserName"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:padding="10dp"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp">
+                    android:textSize="15sp">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -48,8 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:id="@+id/editlan"
-                android:layout_below="@+id/edithouse"
-                >
+                android:layout_below="@+id/edithouse">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editemail"
@@ -61,11 +61,35 @@
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/montserrat"
                     android:hint="Email ID"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:padding="10dp"
-                    android:textSize="18sp">
+                    android:textSize="15sp">
 
                 </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/editph"
+                android:layout_below="@+id/edithouse">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -74,20 +98,24 @@
                 android:text="Update"
                 android:textColor="@android:color/white"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/buttonstyleindeliverystat"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/otpbtnsyle"
                 android:fontFamily="@font/montserrat_bold"
                 android:textAllCaps="false"
-                android:textSize="15dp"
+                android:textSize="17dp"
                 android:id="@+id/update"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
                 android:layout_marginTop="10dp"
-                android:textSize="15dp"
+                android:textSize="17sp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
                 android:textAllCaps="false"
                 android:fontFamily="@font/montserrat_bold"
-                android:background="@drawable/buttonstyleindeliverystat"
+                android:background="@drawable/otpbtnblack"
                 android:textColor="@android:color/white"
                 android:id="@+id/cancel"/>
         </LinearLayout>

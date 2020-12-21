@@ -1,193 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:background="@android:color/white"
-    android:fitsSystemWindows="true">
+    tools:context=".OtpRegister"
+    android:orientation="vertical">
 
-    <RelativeLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="185dp"
-        android:id="@+id/back"
-        android:src="@drawable/registerback"
-        />
-
-        <ImageView
-            android:id="@+id/olologo"
-            android:layout_width="147dp"
-            android:layout_height="53dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/olokartlogoblack" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="69dp"
-            android:layout_below="@+id/olologo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/playfair_display"
-            android:text="Register"
-            android:textColor="@android:color/white"
-            android:textSize="40dp"
-            android:textStyle="bold" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_below="@id/olologo"
-            android:layout_marginTop="150dp"
-            android:layout_marginLeft="10dp"
-            android:elevation="15dp"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="15dp">
-
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="450dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/registerback" />
 
-                <TextView
-                    android:id="@+id/welcome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/playfair_display"
-                    android:text="Welcome!"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/olologo"
+                android:layout_width="103dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/olokartlogoblack" />
 
-                <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/olologo"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Register"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="45sp"
+                app:cardElevation="20sp">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:id="@+id/txtuser"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/welcome">
+                    android:layout_height="wrap_content">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="User Name"
-                        android:id="@+id/userNameReg"
-                        android:layout_marginStart="45dp"
-                        android:fontFamily="@font/source_sans_pro"
-                        android:textColorHint="#42a626"
-                        android:layout_marginEnd="45dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <LinearLayout
-                    android:id="@+id/phonelin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtuser"
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginRight="45dp"
-                    android:layout_marginTop="30dp"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/editTextCountryCode"
+                    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/spin_kitVerify"
+                        style="@style/SpinKitView.DoubleBounce"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
-                        android:maxLines="1"
-                        android:fontFamily="@font/source_sans_pro"
-                        android:singleLine="true"
-                        android:text="+880"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                        android:textColor="@android:color/black" />
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:SpinKit_Color="#47a626" />
 
-                    <View
-                        android:layout_width="5dp"
-                        android:layout_height="0dp" />
+                    <TextView
+                        android:id="@+id/verifyotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Welcome!"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/editTextPhone"
+                    <TextView
+                        android:id="@+id/textf"
+                        android:layout_width="209dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verifyotp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:inputType="textMultiLine"
+                        android:text="Regsiter and get shopping!"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Mobile Number"
-                        android:inputType="phone"
+                        android:orientation="vertical"
+                        android:id="@+id/linReg"
+                        android:layout_below="@+id/textf">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                      <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/usernameReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/montserrat"
                         android:maxLines="1"
-                        android:fontFamily="@font/source_sans_pro"
+                          android:hint="User Name"
                         android:singleLine="true"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                        android:textColor="@android:color/black">
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
 
                         <requestFocus />
 
-                    </EditText>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp">
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editCode"
+                                android:textSize="12dp"
+                                />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/numer"
+                                android:inputType="number"
+                                android:textSize="12dp"
+                                android:layout_toEndOf="@id/editCode"
+                                android:layout_marginStart="10dp"
+                                android:hint="Mobile Number"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/continueReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linReg"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginEnd="25sp"
+                        android:layout_marginBottom="30sp"
+                        android:background="@drawable/otpbtnsyle"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Continue"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
 
 
-                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/buttonContinue"
-                    android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/cardVerify"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/motocycle"
+                    android:layout_width="300dp"
+                    android:layout_height="125dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/moto" />
+
+                <RelativeLayout
+                    android:id="@+id/relLogTxt"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/phonelin"
-                    android:layout_margin="25dp"
-                    android:background="@drawable/otpbtnsyle"
-                    android:text="Continue"
-                    android:fontFamily="@font/source_sans_pro"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/motocycle"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/alreadyhaveanacnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:fontFamily="@font/montserrat"
+                        android:text="Already have an account?"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/alreadyhaveanacnt"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:onClick="loginBack"
+                        android:text="Login"
+                        android:textColor="#42a626"
+                        android:textSize="13sp" />
+
+
+
+
+
+
+                </RelativeLayout>
             </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical">-->
 
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Verify Your Number"-->
-<!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
-<!--            android:textColor="@android:color/black"-->
-<!--            android:textStyle="bold" />-->
+        </RelativeLayout>
+    </ScrollView>
 
-<!--        <TextView-->
-<!--            android:layout_width="280dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Please enter your mobile number to receive a verification code"-->
-<!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
-<!--            android:textColor="@android:color/black" />-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="35dp"-->
-<!--            android:layout_marginBottom="15dp"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            -->
-
-<!--           -->
-
-<!--        </LinearLayout>-->
-
-
-
-<!--    </LinearLayout>-->
-
-</FrameLayout>
+</RelativeLayout>

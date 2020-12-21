@@ -2,12 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp"
        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
         android:padding="10dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,10 +21,10 @@
                 android:text="Sorry!"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textSize="21dp"
+                android:textSize="17sp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#47a626"/>
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@android:color/black"/>
             <View
                 android:layout_width="70dp"
                 android:layout_height="1dp"
@@ -41,24 +43,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:textColor="#47a626"
-                android:textSize="21sp"
+                android:textColor="@color/quantum_grey"
+                android:textSize="13sp"
                 android:layout_margin="20dp"
-                android:text="Error! Location!"
+                android:text="We are unable to get your location!"
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/buttonloc"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="Reset Location"
+                android:textAllCaps="false"
                 android:fontFamily="@font/montserrat"
-                android:textSize="25sp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittextbackground"
-                android:textColor="@color/colorText" />
+                android:textSize="15sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/otpbtnsyle"
+                android:textColor="@android:color/white"/>
 
 
 

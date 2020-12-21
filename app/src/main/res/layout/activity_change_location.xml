@@ -1,28 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="5dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".ChangeLocationActivity">
-    <EditText
-        android:id="@+id/place_change"
-        android:hint="Search"
-        android:background="@drawable/editdesign"
-        android:inputType="textPostalAddress"
-        android:padding="15dp"
-        android:fontFamily="@font/montserrat"
-        android:layout_marginBottom="15dp"
-        android:drawableLeft="@drawable/places_ic_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/places_change_recycler_view"
-        android:background="#FFF"
-        android:orientation="vertical"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose location"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/crossImage"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kitOrderedChangeLoc"
+        style="@style/SpinKitView.CubeGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@android:color/holo_green_dark" />
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relSearch">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find yourself!"
+                android:textSize="30sp"
+                android:id="@+id/findyourlsef"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/montserrat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtsearch"
+                android:text="Search your location and select"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/findyourlsef"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtsearchtxt"
+                android:text="Search"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="15dp"
+                android:textSize="15sp"
+                android:layout_below="@id/txtsearch"
+                android:layout_marginTop="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtsearchtxt"
+                android:layout_margin="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search for Location"
+                    android:paddingStart="20sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="10dp"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@drawable/searchbar"
+                    android:id="@+id/place_change"/>
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="20dp"
+                    android:background="@color/quantum_grey"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        android:src="@drawable/searchbarimage"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"-->
+
+    <!--        />-->
+
+    <!--    <com.github.ybq.android.spinkit.SpinKitView-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/spin_kitOrderedChangeLoc"-->
+<!--        style="@style/SpinKitView.Circle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:SpinKit_Color="@android:color/holo_green_dark" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/place_change"-->
+<!--        android:hint="Search Location"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:paddingStart="10dp"-->
+<!--        android:drawablePadding="15dp"-->
+<!--        android:textSize="17sp"-->
+<!--        android:background="@drawable/editdesign"-->
+<!--        android:inputType="textPostalAddress"-->
+<!--        android:padding="15dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:drawableLeft="@drawable/places_ic_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/headbagtxt"-->
+<!--        android:text="Cancel Order Con"-->
+<!--        android:textSize="25dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:fontFamily="@font/playfair_display"/>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNo"
+        android:textSize="12sp"
+        android:layout_margin="5dp"
+        android:text="Order already accepted by vendor, you cannot cancel it!\nYou can contact on 9346850529 if any queries"
+        android:textColor="@color/quantum_grey"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="10dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_centerHorizontal="true"/>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/dialNum"-->
+<!--        android:text="Dial"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_below="@id/textNo"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#42a626"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:padding="5dp"-->
+<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dismissNum"
+        android:text="Dismiss"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:layout_below="@id/textNo"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"/>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

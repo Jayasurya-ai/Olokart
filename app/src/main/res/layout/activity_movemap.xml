@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.viba.olokartusers.movemap">
-
+    android:background="#ebecf1"
+    tools:context="com.olokart.users.movemap">
 
 
     <LinearLayout
@@ -17,17 +17,20 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
 
+
             <fragment
                 android:id="@+id/fragmap"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:name="com.google.android.gms.maps.SupportMapFragment" />
+                class="com.google.android.gms.maps.SupportMapFragment"/>
+
+
 
             <LinearLayout
                 android:gravity="center"
                 android:id="@+id/locationMarker"
-                android:layout_centerVertical="true"
-                android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:orientation="vertical">
@@ -76,8 +79,10 @@
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:id="@+id/saveloccard"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-20dp"
         android:layout_alignParentBottom="true">
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,25 +91,80 @@
         android:orientation="vertical">
         <View
             android:layout_width="100dp"
-            android:layout_height="2dp"
+            android:layout_height="3dp"
             android:layout_gravity="center"
-            android:background="#42a626"
+            android:background="#4d4d4d"
             android:layout_marginBottom="10dp"/>
-        <TextView
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/montserrat"
-            android:id="@+id/text_cur"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/housenum"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="30dp"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:layout_marginEnd="30dp"-->
+<!--                    android:drawablePadding="10dp"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:hint="House/Flat/Street"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textSize="15sp">-->
+
+<!--                </com.google.android.material.textfield.TextInputEditText>-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/landnum"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="30dp"-->
+<!--                    android:layout_marginEnd="30dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:drawablePadding="10dp"-->
+<!--                    android:layout_below="@id/housenum"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:hint="LandMark"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textSize="15sp">-->
+
+<!--                </com.google.android.material.textfield.TextInputEditText>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_cur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:hint="Address"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@id/currlocImage"
+                android:textColor="@android:color/black"
+                android:textColorHint="#3e3e3e"
+                android:textSize="15sp" />
+
+            <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+                android:id="@+id/currlocImage"
+            android:src="@drawable/ic_baseline_my_location_24"
+            android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+
+            android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
 
             <Button
                 android:layout_width="match_parent"
@@ -112,18 +172,24 @@
                 android:text="Set current location"
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="@android:color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textAllCaps="false"
-                android:background="@drawable/buttonstyleindeliverystat"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/otpbtnsyle"
                 android:id="@+id/set_location"/>
-        </LinearLayout>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Set Location Manually"
-            android:background="@drawable/buttonstyleindeliverystat"
-            android:textSize="16sp"
+            android:background="@drawable/otpbtnblack"
+            android:textSize="15sp"
             android:textAllCaps="false"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
             android:textColor="@android:color/white"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginTop="10dp"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.viba.olokartusers">
+    package="com.olokart.users">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -17,61 +17,77 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <meta-data
         android:name="com.razorpay.Apikey"
         android:value="rzp_live_89DugIVu4nu623" />
 
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".TermsConditions" />
-        <activity android:name=".DesclaimerActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".OtpRegister" />
-        <activity android:name=".Places" />
-        <activity android:name=".AllProducts" />
-        <activity android:name=".SwipeUp" />
+        android:icon="@mipmap/haaaaa"
+        android:logo="@mipmap/haaaaa"
+        android:roundIcon="@mipmap/haaaaa"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name="com.olokart.users.ReceiveNotification" />
+        <activity android:name="com.olokart.users.AppNotification" />
+        <activity android:name="com.olokart.users.PlacesAutocomplete" />
+        <activity android:name="com.olokart.users.HelpActivity" />
+        <activity android:name="com.olokart.users.TermsConditions" />
+        <activity android:name="com.olokart.users.DesclaimerActivity" />
+        <activity android:name="com.olokart.users.AboutActivity" />
+        <activity android:name="com.olokart.users.OtpRegister" />
+        <activity android:name="com.olokart.users.Places" />
+        <activity android:name="com.olokart.users.SearchActivity" />
+        <activity android:name="com.olokart.users.AllProducts" />
+        <activity android:name="com.olokart.users.SwipeUp" />
         <activity
-            android:name=".HomeActivity"
+            android:name="com.olokart.users.HomeActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ChangeLocationActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SellerProducts"
+        <activity android:name="com.olokart.users.ProfileActivity" />
+        <activity android:name="com.olokart.users.ChangeLocationActivity" />
+        <activity android:name="com.olokart.users.MainActivity"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name="com.olokart.users.SellerProducts"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.olokart.users.VerifyPhoneActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".VerifyPhoneActivity" />
-        <activity android:name=".movemap" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.olokart.users.movemap">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyD5qHZ4_vugCBRgSmXK-hzdbaTl-xNXyA4" />
+        </activity>
+        <activity android:name="com.olokart.users.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyATV1HNPdyUHBdmC-Hu6ppqEowOKmrRcRE" />
-
-        <activity android:name=".OrdersAvtivity" />
-        <activity android:name=".BagAvtivity" />
-        <activity android:name=".SearchLocationActivity" />
+        <activity android:name="com.olokart.users.OrdersAvtivity" />
+        <activity android:name="com.olokart.users.BagAvtivity"
+            android:windowSoftInputMode="adjustPan"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.gms.version"-->
+<!--            android:value="@integer/google_play_services_version" />-->
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD5qHZ4_vugCBRgSmXK-hzdbaTl-xNXyA4" />
     </application>
 
 </manifest>

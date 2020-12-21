@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+       app:cardElevation="5dp"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Olokart"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="21dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/black"/>
+            <View
+                android:layout_width="70dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="#47a626"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="75dp"
+                android:src="@drawable/update"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#4d4d4d"
+                android:textSize="21sp"
+                android:layout_margin="20dp"
+                android:text="Update to use\nnew features of the app"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/updatebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="Update"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="17sp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/otpbtnsyle"
+                android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
